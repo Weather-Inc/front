@@ -11,25 +11,7 @@ on:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  lint:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Install packages
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install
-        
+jobs:   
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -59,5 +41,5 @@ jobs:
           email: ${{ secrets.HEROKU_EMAIL }}
           api_key: ${{ secrets.HEROKU_API_KEY }}
           app_name: ${{ secrets.HEROKU_APP_NAME }}
-          dockerfile_path: '**/Dockerfile'
+          dockerfile_path: './Dockerfile'
           options: '-t $t{{ secrets.FRONT_IMG_TAG }}' # Docker Build Options
