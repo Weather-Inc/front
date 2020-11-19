@@ -10,7 +10,7 @@ COPY ci/front.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-COPY /build /usr/share/nginx/html
+COPY /build /var/www/html
 
 EXPOSE 80
 
