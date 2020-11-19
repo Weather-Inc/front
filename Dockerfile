@@ -14,4 +14,4 @@ COPY /build /var/www/html
 
 EXPOSE 80
 
-CMD ["sudo", "nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
