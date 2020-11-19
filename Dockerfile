@@ -4,7 +4,7 @@ FROM nginx:1.13.12-alpine
 WORKDIR /app
 
 # Copy package sources from build/ directory
-COPY build/ ./
+COPY . .
 
 COPY ci/front.conf /etc/nginx/conf.d/default.conf
 
