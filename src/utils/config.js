@@ -1,5 +1,5 @@
 const config = {
-  backUrl: 'http://localhost:3100/api/v0'
+  backUrl: 'https://sn-weather-back.herokuapp.com/api/v0'
 }
 
 export default config
