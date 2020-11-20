@@ -234,6 +234,8 @@ class Home extends Component {
       </Grid>
     ))
 
+    const adviceCardContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
     return (
       <Container className={classes.root}>
         <Grid container spacing={3}>
@@ -283,15 +285,15 @@ class Home extends Component {
 
               <Grid container justify="space-evenly" spacing={2}>
                 <Grid item xs={12} md={4}>
-                  <AdviceCard />
+                  <AdviceCard title="Advice 1" content={adviceCardContent} />
                 </Grid>
 
                 <Grid item xs={12} md={4}>
-                  <AdviceCard />
+                  <AdviceCard title="Advice 2" content={adviceCardContent} />
                 </Grid>
 
                 <Grid item xs={12} md={4}>
-                  <AdviceCard />
+                  <AdviceCard title="Advice 3" content={adviceCardContent} />
                 </Grid>
               </Grid>
             </Container>

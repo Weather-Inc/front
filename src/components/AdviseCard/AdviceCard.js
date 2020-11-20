@@ -1,15 +1,28 @@
-import { Button, Card, CardActionArea, CardActions, CardContent } from '@material-ui/core'
+import { Button, Card, CardActionArea, CardActions, CardContent, CardHeader, Typography } from '@material-ui/core'
 import { ArrowForward } from '@material-ui/icons'
-// import adviceCardStyles from 'assets/styles/advice-card/adviceCard'
+
+import adviceCardStyles from 'assets/styles/advice-card/adviceCard'
+
+import theme from 'theme'
 
 const adviceCard = props => {
-  // const classes = adviceCardStyles()
+  const classes = adviceCardStyles(theme)
 
   return (
     <Card>
+      <CardHeader
+        className={classes.cardHeader}
+        title={
+          <Typography>
+            {props.title}
+          </Typography>
+        }
+      />
       <CardActionArea>
-        <CardContent>
-          Card
+        <CardContent className={classes.cardContent}>
+          <Typography>
+            {props.content}
+          </Typography>
         </CardContent>
       </CardActionArea>
 
