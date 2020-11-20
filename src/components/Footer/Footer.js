@@ -1,15 +1,18 @@
-import { AppBar, Typography } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
+
 import footerStyles from 'assets/styles/footer/footer'
 
+import theme from 'theme'
+
 const footer = () => {
-  const classes = footerStyles()
+  const classes = footerStyles(theme)
 
   return (
-    <AppBar position="fixed" className={classes.root} color='primary'>
+    <Container className={classes.root}>
       <Typography>
         AbundeSEG Task
       </Typography>
-    </AppBar>
+    </Container>
   );
 }
 

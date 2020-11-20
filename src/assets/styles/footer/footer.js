@@ -2,12 +2,11 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const footerStyles = makeStyles(theme => ({
   root: {
-    alignItems: 'center',
-    bottom: 0,
+    backgroundColor: theme.palette.primary.main,
     color: '#fff',
-    flexGrow: 1,
+    maxWidth: '100%',
     padding: '20px',
-    top: 'auto'
+    textAlign: 'center'
   }
 }))
 
